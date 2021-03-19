@@ -3,7 +3,7 @@ import pygame, sys
 
 def draw_floor():
     screen.blit(floor_surface, (floor_x, 900))
-    screen.blit(floor_surface, (floor_x + 576, 900))
+    screen.blit(floor_surface, (floor_x + -576, 900))
 
 
 pygame.init()
@@ -34,7 +34,7 @@ while True:
     clock.tick(144)
 
     screen.blit(background_surface, (0, 0))
-    floor_x += -1
+    floor_x += 1
     draw_floor()
-    if floor_x <= -576:
+    if floor_x >= 576:
         floor_x = 0
