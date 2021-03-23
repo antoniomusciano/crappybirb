@@ -56,6 +56,8 @@ def score_display():
 
 
 pygame.init()
+
+pygame.display.set_caption("crappy birb")
 screen = pygame.display.set_mode((576, 900))
 clock = pygame.time.Clock()
 game_font = pygame.font.Font('04B_19__.TTF', 40)
@@ -66,6 +68,11 @@ bird_movement = 0
 game_active = True
 score = 0
 high_score = 0
+
+#icon
+
+ICON = pygame.transform.scale2x(pygame.image.load('images/icon.png')).convert()
+pygame.display.set_icon(ICON)
 
 background_surface = pygame.transform.scale2x(pygame.image.load('images/background-day.png')).convert()
 # background_surface = pygame.transform.scale2x(background_surface)
